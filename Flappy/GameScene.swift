@@ -1,45 +1,41 @@
 //
-//  GameScene.swift
+//  GameStart.swift
 //  Flappy
 //
-//  Created by Moe Wilson on 4/7/15.
+//  Created by Moe Wilson on 4/14/15.
 //  Copyright (c) 2015 Yuliya Levitskaya. All rights reserved.
 //
 
-import SpriteKit
 
-class GameScene: SKScene {
+import SpriteKit
+import AVFoundation
+class GameScene: SKScene{
+    
+    var sceneTest:GameStart!
+    let myLabel = SKLabelNode(fontNamed:"Chalkduster");
+    let myLabel2 = SKLabelNode(fontNamed:"Chalkduster")
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
+        myLabel.text = "Flappy";
         myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
+        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) + myLabel.frame.size.height);
         self.addChild(myLabel)
+        
+        myLabel2.text = "Touch To Begin..";
+        myLabel2.fontSize = 40;
+        myLabel2.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        
+        self.backgroundColor = UIColor.blackColor()
+        self.addChild(myLabel2)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
         for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+            let gameView = self.view as SKView!
+            gameView.ignoresSiblingOrder = true;
+            sceneTest = GameStart(size: gameView.bounds.size)
+            gameView.presentScene(sceneTest)
+            sceneTest.scaleMode = .AspectFill
         }
-    }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
     }
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B939CDE61ADE04960098D7EF /* rocket.wav in Resources */ = {isa = PBXBuildFile; fileRef = B939CDE51ADE04960098D7EF /* rocket.wav */; };
+		B939CDE81ADE05E30098D7EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B939CDE71ADE05E30098D7EF /* AVFoundation.framework */; };
+		B9BF95FA1AD65E2B00AFFC81 /* bird.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B9BF95F91AD65E2B00AFFC81 /* bird.atlas */; };
+		B9BF95FC1AD75AEB00AFFC81 /* flame.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B9BF95FB1AD75AEB00AFFC81 /* flame.atlas */; };
+		B9BF95FF1ADDBEF500AFFC81 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BF95FE1ADDBEF500AFFC81 /* GameOver.swift */; };
+		B9BF96011ADDCDDD00AFFC81 /* GameStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BF96001ADDCDDD00AFFC81 /* GameStart.swift */; };
 		B9C64D531AD49D8500F16693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C64D521AD49D8500F16693 /* AppDelegate.swift */; };
 		B9C64D551AD49D8600F16693 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9C64D541AD49D8600F16693 /* GameScene.sks */; };
 		B9C64D571AD49D8600F16693 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C64D561AD49D8600F16693 /* GameScene.swift */; };
@@ -28,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B939CDE51ADE04960098D7EF /* rocket.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rocket.wav; sourceTree = "<group>"; };
+		B939CDE71ADE05E30098D7EF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B9BF95F91AD65E2B00AFFC81 /* bird.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bird.atlas; sourceTree = "<group>"; };
+		B9BF95FB1AD75AEB00AFFC81 /* flame.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = flame.atlas; sourceTree = "<group>"; };
+		B9BF95FE1ADDBEF500AFFC81 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		B9BF96001ADDCDDD00AFFC81 /* GameStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStart.swift; sourceTree = "<group>"; };
 		B9C64D4D1AD49D8500F16693 /* Flappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C64D511AD49D8500F16693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C64D521AD49D8500F16693 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B939CDE81ADE05E30098D7EF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 		B9C64D441AD49D8500F16693 = {
 			isa = PBXGroup;
 			children = (
+				B939CDE71ADE05E30098D7EF /* AVFoundation.framework */,
 				B9C64D4F1AD49D8500F16693 /* Flappy */,
 				B9C64D691AD49D8600F16693 /* FlappyTests */,
 				B9C64D4E1AD49D8500F16693 /* Products */,
@@ -81,12 +95,16 @@
 		B9C64D4F1AD49D8500F16693 /* Flappy */ = {
 			isa = PBXGroup;
 			children = (
+				B9BF95F91AD65E2B00AFFC81 /* bird.atlas */,
 				B9C64D521AD49D8500F16693 /* AppDelegate.swift */,
 				B9C64D541AD49D8600F16693 /* GameScene.sks */,
 				B9C64D561AD49D8600F16693 /* GameScene.swift */,
+				B9BF96001ADDCDDD00AFFC81 /* GameStart.swift */,
 				B9C64D581AD49D8600F16693 /* GameViewController.swift */,
+				B9BF95FE1ADDBEF500AFFC81 /* GameOver.swift */,
 				B9C64D5A1AD49D8600F16693 /* Main.storyboard */,
 				B9C64D5D1AD49D8600F16693 /* Images.xcassets */,
+				B9BF95FB1AD75AEB00AFFC81 /* flame.atlas */,
 				B9C64D5F1AD49D8600F16693 /* LaunchScreen.xib */,
 				B9C64D501AD49D8500F16693 /* Supporting Files */,
 			);
@@ -96,6 +114,7 @@
 		B9C64D501AD49D8500F16693 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B939CDE51ADE04960098D7EF /* rocket.wav */,
 				B9C64D511AD49D8500F16693 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -201,6 +220,9 @@
 				B9C64D611AD49D8600F16693 /* LaunchScreen.xib in Resources */,
 				B9C64D5E1AD49D8600F16693 /* Images.xcassets in Resources */,
 				B9C64D551AD49D8600F16693 /* GameScene.sks in Resources */,
+				B9BF95FC1AD75AEB00AFFC81 /* flame.atlas in Resources */,
+				B939CDE61ADE04960098D7EF /* rocket.wav in Resources */,
+				B9BF95FA1AD65E2B00AFFC81 /* bird.atlas in Resources */,
 				B9C64D5C1AD49D8600F16693 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +244,8 @@
 				B9C64D571AD49D8600F16693 /* GameScene.swift in Sources */,
 				B9C64D591AD49D8600F16693 /* GameViewController.swift in Sources */,
 				B9C64D531AD49D8500F16693 /* AppDelegate.swift in Sources */,
+				B9BF95FF1ADDBEF500AFFC81 /* GameOver.swift in Sources */,
+				B9BF96011ADDCDDD00AFFC81 /* GameStart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +439,7 @@
 				B9C64D721AD49D8600F16693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9C64D731AD49D8600F16693 /* Build configuration list for PBXNativeTarget "FlappyTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +448,7 @@
 				B9C64D751AD49D8600F16693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
